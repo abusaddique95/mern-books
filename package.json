@@ -1,25 +1,19 @@
 {
-  "name": "server",
+  "name": "mern-books-one",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
-    "watch": "nodemon server.js"
+    "start:server": "cd server && npm run watch",
+    "start:client": "cd client && npm start",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "apollo-server": "^3.10.2",
-    "apollo-server-express": "^3.10.2",
-    "bcrypt": "^4.0.1",
-    "express": "^4.17.1",
-    "graphql": "^16.6.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.10"
-  },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "concurrently": "^5.1.0"
   }
 }
